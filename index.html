@@ -6,23 +6,36 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Add fonts from Adobe fonts or Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Submit Recommendations</title>
     <!-- Add a favicon -->
-</head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  </head>
 <body>
-  <!-- Implement a skip to main! -->
-    <!-- <form action="" method="post"> Connect to formspree.io-->
+  <!-- add a skip to main -->
+<a class="skip" href = "#welcome">Skip to Main Content</a>
+  <!-- <form action="" method="post"> Connect to formspree.io-->
+    <form action="https://formspree.io/f/mldjewaq" method="POST"> 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br><br>
+        <label id="welcome">Area of Submission:</label><br>
+
 <div class="radio">
-        <label>Area of Submission:</label><br>
         <!-- How can the label and button line up and be easily navigatable? -->
-  <input type="radio" id="travel" name="interest" value="travel" required>
-  <label for="travel">Travel</label><br>
-  <input type="radio" id="recipe" name="interest" value="recipe" tabindex="0">
-  <label for="recipe">Recipe</label><br>
-  <input type="radio" id="pets" name="interest" value="pets">
-  <label for="pets">Pets</label><br><br>
+  <div>
+    <input type="radio" id="travel" name="interest" value="travel" required tabindex="0">
+    <label for="travel">Travel</label><br>
+  </div>
+  <div>
+    <input type="radio" id="recipe" name="interest" value="recipe" tabindex="0">
+    <label for="recipe">Recipe</label><br>
+  </div>
+  <div>
+    <input type="radio" id="pets" name="interest" value="pets" tabindex="0">
+    <label for="pets">Pets</label><br><br>
+  </div>
 </div>
 
 

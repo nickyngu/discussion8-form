@@ -1,24 +1,45 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
   
+  * {
+    font-family: Roboto;
+  }
+
+  :root {
+    --red: red;
+    --grey: grey;
+    --lightblue: lightblue;
+    --black: black;
+  }
+
   form {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     border: 1px solid #ccc;
     border-radius: 16px;
     width:70%;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: var(--black);
+    background: var(--lightblue);
   }
 
   .radio {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
     /* background: #575294; */
-    color: #702082;
+    color: var(--black);
+  }
+  
+  .radio div {
+    display: flex;
+    align-items: center;
+  }
+  .radio input {
+    margin-left: 20px;
+    margin-right: 5px;
   }
 
   #name {
@@ -26,7 +47,7 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
+    background: #ffffff;
     color: #9B9A6D;
   }
 
@@ -39,14 +60,14 @@
   input,
   textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     width: 100%;
   }
 
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: var(--black);
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,5 +75,17 @@
   }
 
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #224c24;
+  }
+
+  .skip {
+      position: absolute;
+      left: 40px;
+      top: -500px;
+      background-color: white;
+      padding: 15px;
+  }
+
+  .skip:focus {
+      top: 40px;
   }
